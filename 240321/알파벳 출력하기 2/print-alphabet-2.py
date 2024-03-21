@@ -7,4 +7,7 @@ for i in range(n):
     for k in range(n-i):
         print(x,end=" ")
         x = chr(ord(x)+1)
+        if ord(x) > ord('Z'):
+            x = 'A'
+    
     print()
