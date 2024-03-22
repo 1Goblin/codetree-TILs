@@ -2,6 +2,6 @@ arr = list(map(int, input().split()))
 s = 0
 
 for i in arr:
-    s+=arr[i]
+    s+=i
 
 print(s)
