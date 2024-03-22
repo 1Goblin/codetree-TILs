@@ -6,4 +6,4 @@ for i in arr:
         break
     s+=i
     cnt+=1
-print(s, s/cnt)
+print(f"{s} {s/cnt:.1f}")
