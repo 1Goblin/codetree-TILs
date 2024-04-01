@@ -4,7 +4,7 @@ b = int(arr[1])
 
 count =[0]*10
 s = 0
-for i in range(100):
+while (1):
 
     count[a%b]+=1
     a=a//b
