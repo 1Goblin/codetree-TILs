@@ -1,16 +1,16 @@
 a, b = tuple(map(int, input().split()))
 n1 = list(map(int, input().split()))
 n2 = list(map(int, input().split()))
-c = 0
 an = "Yes"
-for i in n2:
-    if i in n1:
-        c = n1.index(i)
-        for j in range(c,b+1):
-            if n1[j]==n2[j-c]:
-                an="Yes"
+
+for i in range(a):
+    if n1[i]==n2[0]:
+        for j in range(b):
+            if n1[i+j]==n2[j]:
+                an ="Yes"
             else:
-                an="No"
+                an= "No"
     else:
-        an="No"
+        an = "No"
+
 print(an)
