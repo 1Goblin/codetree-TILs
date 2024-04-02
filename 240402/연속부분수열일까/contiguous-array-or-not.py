@@ -1,7 +1,7 @@
 a, b = tuple(map(int, input().split()))
 n1 = list(map(int, input().split()))
 n2 = list(map(int, input().split()))
-an = "Yes"
+an = "No"
 
 for i in range(a):
     if n1[i]==n2[0]:
@@ -11,7 +11,5 @@ for i in range(a):
                     an ="Yes"
                 else:
                     an= "No"
-    else:
-        an = "No"
 
 print(an)
