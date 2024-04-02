@@ -2,6 +2,7 @@ n, q = tuple(map(int, input().split()))
 values = list(map(int, input().split()))
 
 for i in range(1,n+1):
+    arr = []
     arr = list(map(int, input().split()))
     a = int(arr[0])
     b = int(arr[1])
