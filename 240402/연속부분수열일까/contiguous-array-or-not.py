@@ -11,4 +11,6 @@ for i in n2:
                 an="Yes"
             else:
                 an="No"
+    else:
+        an="No"
 print(an)
