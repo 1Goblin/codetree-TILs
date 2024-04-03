@@ -12,7 +12,7 @@ while (1):
         if arr[i]>m and arr[i] not in s :
             m = arr[i]
         elif arr[i]==m and arr[i] not in s:
-            s.oppend(arr[i])
+            s.append(arr[i])
             m = -1
             break 
         if i==n-1:
