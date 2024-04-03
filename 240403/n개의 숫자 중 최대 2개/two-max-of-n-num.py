@@ -10,6 +10,8 @@ tm = -sys.maxsize
 for i in arr:
     if i>fm:
         fm = i 
-    elif i>tm:
-        tm = i
+for k in arr:
+    if fm>k and k>=tm:
+        tm = k
+
 print(fm, tm)
