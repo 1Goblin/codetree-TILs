@@ -3,8 +3,8 @@ import sys
 n = int(input())
 arr = list(map(int, input().split()))
 
-fm = -sys.maxsize
-tm = -sys.maxsize
+fm = arr[0]
+tm = arr[0]
 
 for i in arr:
 
