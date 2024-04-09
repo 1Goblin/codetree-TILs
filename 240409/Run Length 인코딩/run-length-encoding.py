@@ -5,7 +5,7 @@ cnt = 0
 for i in range(len(string)-1):
     if len(string)==1:
         st=string+"1"
-abcdefg
+
     if string[i]==string[i+1]:
         cnt+=1
         if i==len(string)-2:
