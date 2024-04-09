@@ -15,8 +15,8 @@ for i in range(1, len(string)):
         ca=string[i]
         cnt=0
     
-    if i==len(string)-1:
-        st+=ca+str(cnt+1)
+st+=ca+str(cnt+1)
+
 
 
 print(len(st))
