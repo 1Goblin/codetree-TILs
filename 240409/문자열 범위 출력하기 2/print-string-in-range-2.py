@@ -1,4 +1,4 @@
 string = input()
 n = int(input())
 
-print(string[len(string):len(string)-n-1:-1])
+print(string[-1:-n-1:-1])
