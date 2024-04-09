@@ -1,19 +1,20 @@
 string = input()
 
-cnt = 0
 st = ""
-
-for i in range(0,len(string)-1):
+cnt = 0
+for i in range(len(string)-1):
+    if len(string)==1:
+        st=string+"1"
+    
     if string[i]==string[i+1]:
         cnt+=1
+        if i==len(string)-2:
+            st+=string[i]+str(cnt+1)
     else:
         st+=string[i]+str(cnt+1)
         cnt=0
-    if i==len(string)-2:
-        st+=string[i+1]+str(cnt+1)
-if len(string)==1:
-    st = string
-    
+        if i==len(string)-2:
+            st+=string[i]+"1"+string[i+1]+"1"
 
 print(len(st))
 print(st)
