@@ -1,3 +1,6 @@
 a = input().split()
 
-print(a[0].find(a[1]))
+if a[1] in a[0]:
+    print(a[0].index(a[1]))
+else:
+    print("No")
