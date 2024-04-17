@@ -1,5 +1,7 @@
 a, b = tuple(map(int,input().split()))
 
+sump = 0
+
 def prime(num):
     if num==1:
         return False
