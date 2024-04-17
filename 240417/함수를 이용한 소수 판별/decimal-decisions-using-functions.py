@@ -1,16 +1,15 @@
 a, b = tuple(map(int,input().split()))
 
-def padd(num1, num2):
-    addNum = 0
-    for i in range(num1, num2+1):
-        for j in range(2,i):
-            if i%j==0:
-                break
-            if j==i-1:
-                addNum+=i
-        if i==2:
-            addNum+=2
-    return addNum
+def prime(num):
+    if num==1:
+        return False
+    for i in range(2,num):
+        if num%i==0:
+            return False
+    return True 
 
+for i in range(a, b+1):
+    if prime(i):
+        sump+=i
 
-print(padd(a,b))
+print(sump)
