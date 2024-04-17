@@ -7,12 +7,13 @@ def check369(num):
     for i in num:
         if i=="3" or i=="6" or i=="9":
             return True
-
-
+    return False
 
 def mul3(num):
     if num%3==0:
         return True
+    else:
+        return False
 
 
 for i in range(a,b+1):
