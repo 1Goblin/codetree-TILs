@@ -3,8 +3,12 @@ a, b = tuple(map(int ,input().split()))
 cnt = 0
 
 def check369(num):
-    if (num//10)%3==0 or (num%10)%3==0:
-        return True
+    num = list(str(num))
+    for i in num:
+        if i=="3" or i=="6" or i=="9":
+            return True
+
+
 
 def mul3(num):
     if num%3==0:
