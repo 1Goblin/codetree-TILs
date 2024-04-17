@@ -8,6 +8,8 @@ def padd(num1, num2):
                 break
             if j==i-1:
                 addNum+=i
+        if i==2:
+            addNum+=2
     return addNum
 
 
