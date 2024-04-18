@@ -24,7 +24,7 @@ def ckmonth(y,m, d):
             return True
     elif (m==4 or m==6 or m==9 or m==11) and d<31:
         return True
-    elif (m==1 or m==3 or m==5 or m==7 and m==8 and m==10 and m==12) and d<32:
+    elif (m==1 or m==3 or m==5 or m==7 or m==8 or m==10 or m==12) and d<32:
         return True
     else:
         return False
