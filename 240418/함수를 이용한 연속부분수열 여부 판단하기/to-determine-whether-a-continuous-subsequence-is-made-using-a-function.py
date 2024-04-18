@@ -4,7 +4,7 @@ n1 = list(map(int, input().split()))
 n2 = list(map(int, input().split()))
 
 def snum(n1, n2, a, b):
-    for i in range((a-b)):
+    for i in range((a-b)+1):
         for j in range(b):
             if n1[i+j]!=n2[j]:
                 break
