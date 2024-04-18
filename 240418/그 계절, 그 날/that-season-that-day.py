@@ -17,10 +17,11 @@ def ckyoon(y):
         return True
 
 def ckmonth(y,m, d):
-    if (ckyoon(y) and m==2) and d<30 :
-        return True
-    elif m==2 and d<29:
-        return True
+    if m==2:
+        if ckyoon(y) and d<30:
+            return True
+        elif d<29:
+            return True
     elif (m==4 or m==6 or m==9 or m==11) and d<31:
         return True
     elif d<32:
