@@ -13,7 +13,7 @@ for i in range(n):
 
     students.append(student(height, weight, i+1))
 
-students.sort(key=lambda x : (x.height, x.weight))
+students.sort(key=lambda x : (x.height, -x.weight))
 
 for student in students:
     print(student.height, student.weight, student.num)
