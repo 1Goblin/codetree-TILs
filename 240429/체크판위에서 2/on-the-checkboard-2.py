@@ -16,7 +16,7 @@ for i in range(1, r-2):
             for m in range(i+1, r-1):
                 for n in range(j+1, c-1):
                     p_word = arr[i][j]
-                    if p_word != arr[m][n]:
+                    if p_word != arr[m][n] and p_word == arr[r-1][c-1]:
                         p_word = arr[m][n]
                         cnt+=1
 
