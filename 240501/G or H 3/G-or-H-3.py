@@ -15,13 +15,13 @@ for i in range(n):
     max_n = max(max_n, p)
 
 max_n = max(max_n, k)
-narr = [0] * (max_n + 1)
+narr = [0] * (max_n + 2)
 
 for i in arr:
     narr[i[0]] = i[1]
 
 max_s = 0
-for i in range(1, max_n-k+1):
+for i in range(1, max_n-k+2):
     s = 0
     for j in range(i, i+k+1):
         s+=d[narr[j]] 
