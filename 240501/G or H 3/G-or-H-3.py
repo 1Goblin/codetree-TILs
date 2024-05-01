@@ -22,7 +22,7 @@ for i in arr:
 max_s = 0
 for i in range(1, max_n-k+1):
     s = 0
-    for j in range(i, k+2):
+    for j in range(i, i+k+1):
         s+=d[narr[j]] 
     max_s = max(max_s, s)
 
