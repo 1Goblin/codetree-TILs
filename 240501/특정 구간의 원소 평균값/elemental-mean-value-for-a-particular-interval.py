@@ -10,8 +10,8 @@ for i in range(n):
             s+= arr[k]
             n +=1
         s = s/n
-        for j in range(i, j+1):
-            if s==arr[j]:
+        for l in range(i, j+1):
+            if s==arr[l]:
                 cnt+=1
 
 
