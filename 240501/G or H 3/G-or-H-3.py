@@ -14,6 +14,7 @@ for i in range(n):
     arr.append([p,a])
     max_n = max(max_n, p)
 
+max_n = max(max_n, k)
 narr = [0] * (max_n + 1)
 
 for i in arr:
