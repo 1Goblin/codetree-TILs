@@ -6,6 +6,9 @@ for i in range(len(n)):
         n[i] = 1
         break
 
+if len(n)==1 and n[0]==1:
+    n[0] = 0
+
 l = len(n) -1
 for j in range(len(n)):
     result+=n[j]*2**l
