@@ -5,9 +5,8 @@ for i in range(len(n)):
     if n[i]==0:
         n[i] = 1
         break
-
-if len(n)==1 and n[0]==1:
-    n[0] = 0
+    if i==len(n)-1:
+        n[i]=0
 
 l = len(n) -1
 for j in range(len(n)):
