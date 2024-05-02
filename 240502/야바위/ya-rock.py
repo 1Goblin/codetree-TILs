@@ -29,4 +29,4 @@ for i in range(1,4):
         max_c = cnt
     arr[i] = 0
 
-print(ans)
+print(max_c)
