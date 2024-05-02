@@ -19,6 +19,6 @@ for i in range(n):
     for j in range(i+1,n):
         for k in range(j+1,n):
             area = ctr(i,j,k)
-        max_tr = max(max_tr, area)
+            max_tr = max(max_tr, area)
 
 print(max_tr)
