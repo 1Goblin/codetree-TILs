@@ -8,21 +8,17 @@ arr = [
 ]
 
 
-def ctr(ar : list):
+def ctr(i,j,k):
     
-    return abs((ar[0][0] * ar[1][1] + ar[1][0] * ar[2][1] + ar[2][0] * ar[0][1]) -
-    (ar[1][0] * ar[0][1] + ar[2][0] * ar[1][1] + ar[0][0] * ar[2][1]))
+    return abs((arr[i][0] * arr[j][1] + arr[j][0] * arr[k][1] + arr[k][0] * arr[i][1]) -
+    (arr[j][0] * arr[i][1] + arr[k][0] * arr[j][1] + arr[i][0] * arr[k][1]))
 
 max_tr = -sys.maxsize
 
 for i in range(n):
-    tr = []
-    for j in range(n):
-        if i==j:
-            continue
-        tr.append(arr[j])
-    area=ctr(tr)
-    max_tr = max(max_tr, area)
+    for j in range(i+1,n):
+        for k in range(j+1,n):
+            area = ctr(i,j,k)
+        max_tr = max(max_tr, area)
 
-        
 print(max_tr)
