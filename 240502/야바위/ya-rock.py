@@ -24,9 +24,8 @@ for i in range(1,4):
         swap(play[j][0],play[j][1])
         if arr[play[j][2]] == 1:
             cnt+=1
-    if max_c < cnt:
-        ans = i
-        max_c = cnt
-    arr[i] = 0
+    max_c = max(max_c, cnt)
+    arr = [0]*4
+    
 
 print(max_c)
