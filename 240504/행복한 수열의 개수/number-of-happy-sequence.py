@@ -5,9 +5,12 @@ def check(arr, m):
         return True
 
     for i in range(len(arr)-m+1):
+        c = 0
         for j in range(i+1,i+m):
             if arr[i]!=arr[j]:
                 break
+            c+=1
+        if c>=(m-1):
             return True
         
 
