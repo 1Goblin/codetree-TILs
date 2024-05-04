@@ -6,8 +6,7 @@ def check(arr, m):
             if arr[i]!=arr[j]:
                 break
             return True
-    
-
+        
 
 n, m = tuple(map(int, input().split()))
 cnt = 0
