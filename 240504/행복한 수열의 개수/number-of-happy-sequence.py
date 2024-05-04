@@ -1,6 +1,9 @@
 def check(arr, m):
     c = 0
 
+    if m==1:
+        return True
+
     for i in range(len(arr)-m+1):
         for j in range(i+1,i+m):
             if arr[i]!=arr[j]:
