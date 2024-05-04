@@ -5,6 +5,8 @@ def check(arr, m):
         for j in range(i+1,i+m):
             if arr[i]==arr[j]:
                 c+=1
+            else:
+                break
     if c>=(m-1):
         return True
     else:
