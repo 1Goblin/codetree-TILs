@@ -1,17 +1,15 @@
 def check(arr, m):
-    c = 0
+    c = 1
+    max_c = 1
 
-    if m==1:
-        return True
-
-    for i in range(len(arr)-m+1):
-        c = 0
-        for j in range(i+1,i+m):
-            if arr[i]!=arr[j]:
-                break
+    for i in range(1,len(arr)):
+        if arr[i] == arr[i-1]:
             c+=1
-        if c>=(m-1):
-            return True
+        else:
+            c = 1
+        max_c = max(max_c, c)
+    
+    return max_c >= m
         
 
 n, m = tuple(map(int, input().split()))
