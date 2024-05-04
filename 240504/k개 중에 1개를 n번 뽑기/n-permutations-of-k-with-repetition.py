@@ -11,6 +11,5 @@ def choose(curr_num):
         answer.append(i)
         choose(curr_num + 1)
         answer.pop()
-    return
 
 choose(1)
