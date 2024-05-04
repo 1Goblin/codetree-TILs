@@ -8,8 +8,8 @@ k = 0
 
 an = c//a
 bn = c//b
-for i in range(an):
-    for j in range(bn):
+for i in range(an+1):
+    for j in range(bn+1):
         num = (a*i) + (b*j)
         if num<=c:
             max_num = max(num,max_num)
