@@ -3,14 +3,11 @@ def check(arr, m):
 
     for i in range(len(arr)-m+1):
         for j in range(i+1,i+m):
-            if arr[i]==arr[j]:
-                c+=1
-            else:
+            if arr[i]!=arr[j]:
                 break
-    if c>=(m-1):
-        return True
-    else:
-        return False
+            return True
+    
+
 
 n, m = tuple(map(int, input().split()))
 cnt = 0
