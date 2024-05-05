@@ -22,6 +22,6 @@ else:
     day = num_of_days[m2]-d2 + d1
     for i in range(m2+1,m1):
         day+=num_of_days[i]
-        day = -day
+    day = -day
 
 print(d[day%7])
