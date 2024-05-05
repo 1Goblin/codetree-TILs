@@ -12,12 +12,15 @@ d = {
     6 : "Sun"
 }
 
-
 if m1==m2:
     day = d2-d1
-else:
+elif m1<m2:
     day = num_of_days[m1]-d1 + d2
     for i in range(m1+1,m2):
+        day+=num_of_days[i]
+else:
+    day = num_of_days[m2]-d2 + d1
+    for i in range(m2+1,m1):
         day+=num_of_days[i]
 
 print(d[day%7])
