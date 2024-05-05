@@ -17,7 +17,7 @@ else:
 
 ans = day//7
 for i,w in enumerate(d):
-    if i_week == w and i>=day%7:
+    if i_week == w and i<=day%7:
         ans+=1
 
 print(ans)
