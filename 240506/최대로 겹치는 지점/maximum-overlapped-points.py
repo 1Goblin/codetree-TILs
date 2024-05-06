@@ -5,7 +5,7 @@ arr = [
     for _ in range(n)
 ]
 
-ans = [0]*100
+ans = [0]*102
 
 for x1, x2 in arr:
 
