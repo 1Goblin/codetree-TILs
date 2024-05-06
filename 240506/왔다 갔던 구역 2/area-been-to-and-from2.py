@@ -15,9 +15,14 @@ for _ in range(n):
     a, b = input().split()
     a = int(a)
 
-    for i in range(c,c+a*d[b],d[b]):
-        arr[i]+=1
-        c = i+d[b]
+    if d[b] == 1:
+        for i in range(c,c+a*d[b],d[b]):
+            arr[i]+=1
+            c = i+1
+    else:
+        for i in range(c,c+a*d[b],d[b]):
+            arr[i]+=1
+            c = i-1
     
 cnt = 0
 
