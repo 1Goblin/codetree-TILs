@@ -20,9 +20,10 @@ for _ in range(n):
             arr[i]+=1
             c = i+1
     else:
+        c -= 1
         for i in range(c,c+a*d[b],d[b]):
             arr[i]+=1
-            c = i-1
+            c = i
     
 cnt = 0
 
