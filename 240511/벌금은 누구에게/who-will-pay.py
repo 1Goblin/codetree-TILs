@@ -7,6 +7,12 @@ for _ in range(m):
 
     arr[num] +=1
 
+ans = -1
+
 for i,num in enumerate(arr):
     if num>=k:
-        print(i)
+        ans = i
+        print(ans)
+
+if ans==-1:
+    print(ans)
