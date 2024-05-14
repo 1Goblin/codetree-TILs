@@ -11,11 +11,8 @@ for i in range(1,len(arr)):
         di.append(i-d)
         d = i
 
+
 di.sort()
 
-if di[len(di)-1]%2==0:
-    di[len(di)-1] //= 2
-else:
-    di[len(di)-1] = di[len(di)-1]//2 + 1
-
+di[len(di)-1] //= 2
 print(min(di))
