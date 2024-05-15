@@ -14,11 +14,12 @@ for i in range(n):
     for j in range(n):
         if j!=0 and arr[i][j] == arr[i][j-1]:
             r+=1
+            max_r = max(max_r,r)
         else:
             max_r = max(max_r,r)
             r = 0
-    
-    if (r+1)>=m:
+
+    if (max_r+1)>=m:
         ans+=1
 
 for i in range(n):
@@ -27,10 +28,11 @@ for i in range(n):
     for j in range(n):
         if j!=0 and arr[j][i] == arr[j-1][i]:
             c+=1
+            max_c=max(max_c,c)
         else:
             max_c=max(max_c,c)
             c = 0
-    if (c+1)>=m:
+    if (max_c+1)>=m:
         ans+=1
 
 
