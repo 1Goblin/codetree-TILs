@@ -8,7 +8,7 @@ arr = [
 cnt = 0
 
 visited =[
-    [False for _ in range(m)]
+    [0 for _ in range(m)]
     for _ in range(n)
 ]
 
@@ -26,15 +26,15 @@ def ok_go(x,y):
 
 def dfs(x,y):
     dxs, dys = [1,0], [0,1]
-    global ans
+    global cnt
     
     for dx, dy in zip(dxs,dys):
         ndx, ndy = x+dx, y+dy
         if ok_go(ndx, ndy):
             visited[ndx][ndy] = 1
+            dfs(ndx, ndy)
             if ndx==(n-1) and ndy==(m-1):
                 cnt = 1
-            dfs(ndx, ndy)
 
 dfs(0,0)
 
