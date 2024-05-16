@@ -31,11 +31,13 @@ def dfs(x,y):
     for dx, dy in zip(dxs,dys):
         ndx, ndy = x+dx, y+dy
         if ok_go(ndx, ndy):
-            visited[ndx][ndy] = True
+            visited[ndx][ndy] = 1
             if ndx==(n-1) and ndy==(m-1):
                 cnt = 1
             dfs(ndx, ndy)
 
 dfs(0,0)
+
+
 
 print(cnt)
