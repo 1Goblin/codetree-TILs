@@ -21,7 +21,7 @@ def in_range(x,y):
     return x>=0 and y>=0 and x<n and y<m
 
 def ok_go(x,y):
-    return in_range(x,y) and arr[x][y] == 1 and visited[x][y]
+    return in_range(x,y) and arr[x][y] == 1 and not visited[x][y]
 
 
 def dfs(x,y):
@@ -32,6 +32,7 @@ def dfs(x,y):
         ndx, ndy = x+dx, y+dy
         if ok_go(ndx, ndy):
             visited[ndx][ndy] = 1
+            print(visited)
             if ndx==(n-1) and ndy==(m-1):
                 cnt = 1
             dfs(ndx, ndy)
