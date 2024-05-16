@@ -32,7 +32,6 @@ def dfs(x,y):
         ndx, ndy = x+dx, y+dy
         if ok_go(ndx, ndy):
             visited[ndx][ndy] = 1
-            print(visited)
             if ndx==(n-1) and ndy==(m-1):
                 cnt = 1
             dfs(ndx, ndy)
