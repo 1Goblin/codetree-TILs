@@ -2,6 +2,7 @@ n, m = tuple(map(int, input().split()))
 
 arr =[ [] for _ in range(n+1)]
 visited = [ False for _ in range(n+1)]
+visited[1] = True
 
 cnt = 0
 
@@ -20,4 +21,4 @@ def dfs(vertex):
 
 dfs(1)
 
-print(cnt-1)
+print(cnt)
