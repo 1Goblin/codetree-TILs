@@ -36,5 +36,6 @@ def dfs(x,y):
                 cnt = 1
             dfs(ndx, ndy)
 
+dfs(0,0)
 
 print(cnt)
