@@ -8,7 +8,7 @@ cnt = 0
 for _ in range(m):
     x, y = tuple(map(int, input().split()))
     arr[x].append(y)
-
+    arr[y].append(x)
 
 def dfs(vertex):
     global cnt
@@ -20,4 +20,4 @@ def dfs(vertex):
 
 dfs(1)
 
-print(cnt)
+print(cnt-1)
