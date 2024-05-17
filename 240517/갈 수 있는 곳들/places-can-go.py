@@ -44,9 +44,10 @@ for _ in range(k):
     c -=1
     if can_go(r,c):
         visited[r][c] = 1
+        cnt+=1
         q.append((r,c))
         bfs()
 
 
 
-print(cnt+1)
+print(cnt)
