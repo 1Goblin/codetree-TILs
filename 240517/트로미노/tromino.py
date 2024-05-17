@@ -16,7 +16,7 @@ def a3(r,c):
     return (r+2)<n
 
 def a4(r,c):
-    return (c+2)<n
+    return (c+2)<m
 
 
 
