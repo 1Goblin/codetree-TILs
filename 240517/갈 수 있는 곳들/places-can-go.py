@@ -11,7 +11,7 @@ arr = [
 visited = [
     [0 for _ in range(n)]
     for _ in range(n)
-    ]
+]
 
 cnt = 0
 
@@ -37,13 +37,15 @@ def bfs():
 
 for _ in range(k):
 
+
     q = deque()
     r,c = tuple(map(int, input().split()))
     r -=1
     c -=1
-    visited[r][c] = 1
-    q.append((r,c))
-    bfs()
+    if can_go(r,c):
+        visited[r][c] = 1
+        q.append((r,c))
+        bfs()
 
 
 
