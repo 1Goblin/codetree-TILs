@@ -36,6 +36,7 @@ def bfs():
                 visited[ndx][ndy] = 1
                 q.append((ndx,ndy))
 
+visited[r1][c1] = 1
 q.append(((r1),(c1)))
 bfs()
 
