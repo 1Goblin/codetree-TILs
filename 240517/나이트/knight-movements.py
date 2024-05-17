@@ -40,4 +40,7 @@ visited[r1][c1] = 1
 q.append(((r1),(c1)))
 bfs()
 
-print(step[r2][c2] if step[r2][c2] !=0 else -1)
+if r1==r2 and c1==c2:
+    print(0)
+else:
+    print(step[r2][c2] if step[r2][c2] !=0 else -1)
