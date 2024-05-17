@@ -41,9 +41,10 @@ for _ in range(k):
     r,c = tuple(map(int, input().split()))
     r -=1
     c -=1
+    visited[r][c] = 1
     q.append((r,c))
     bfs()
 
 
 
-print(cnt)
+print(cnt+1)
