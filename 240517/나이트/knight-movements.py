@@ -2,7 +2,7 @@ from collections import deque
 
 n = int(input())
 
-r1, c1, r2, c2 = tuple(map(int, input().split()))
+r2, c2, r1, c1 = tuple(map(int, input().split()))
 
 visited = [
     [0 for _ in range(n)]
@@ -36,8 +36,3 @@ q.append(((r1-1),(c1-1)))
 bfs()
 
 print(step[r2][c2] if step[r2][c2] !=0 else -1)
-
-# for i in range(n):
-#     for j in range(n):
-#         print(visited[i][j],end=" ")
-#     print()
