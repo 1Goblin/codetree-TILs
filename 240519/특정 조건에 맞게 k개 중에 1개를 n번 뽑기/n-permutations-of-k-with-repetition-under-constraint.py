@@ -10,7 +10,7 @@ def choose(num):
     
 
     for i in range(1,k+1):
-        if num >= 2 and ans[-1] == i and ans[-2] == i :
+        if num-2 > 0 and ans[-1] == i and ans[-2] == i :
             continue
         ans.append(i)
         choose(num+1)
