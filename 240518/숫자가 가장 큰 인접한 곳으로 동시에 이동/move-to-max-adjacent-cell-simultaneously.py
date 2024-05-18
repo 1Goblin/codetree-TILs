@@ -31,7 +31,7 @@ def delete():
 
 
 def move(r,c):
-    max_num = arr[r][c]
+    max_num = 0
     max_pos = (-1,-1)
     for dx, dy in zip(dxs, dys):
         ndx, ndy = r+dx, c+dy
