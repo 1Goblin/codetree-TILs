@@ -19,8 +19,8 @@ def f(num):
     if num<=2:
         return 1
     
-    mem[num] = mem[num-1] + mem[num-2]
+    mem[num] = f(num-1) + f(num-2)
 
-    return f(num-1) + f(num-2)
+    return mem[num]
 
 print(f(n))
