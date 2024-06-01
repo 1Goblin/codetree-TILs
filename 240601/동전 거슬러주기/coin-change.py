@@ -3,8 +3,12 @@ arr = list(map(int, input().split()))
 
 dp = [0] * m
 
+
 for i in arr:
-    dp[i-1] = 1
+    if i>m:
+        print(-1)
+    else:
+        dp[i-1] = 1
 
 for i in range(m):
     for j in range(i):
