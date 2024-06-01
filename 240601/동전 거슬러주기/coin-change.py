@@ -5,8 +5,8 @@ arr = list(map(int, input().split()))
 
 dp = [sys.maxsize] * (m)
 
-for i,v in enumerate(arr):
-    dp[v-1] = 1
+for i in arr:
+    dp[i-1] = 1
 
 for i in range(m):  #동전 금액 
     for j in range(i):  #비교할 동전 금액 
