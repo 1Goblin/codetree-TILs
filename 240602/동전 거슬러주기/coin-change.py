@@ -14,7 +14,7 @@ for i in coin:
 
 for i in range(1,m+1):
     for j in range(n):
-        if i>coin[j]:
+        if i>coin[j] and dp[i-coin[j]] != maxV:
             dp[i] = min(dp[i], dp[i-coin[j]] + 1)
 
 if dp[m] == maxV:
