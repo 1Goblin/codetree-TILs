@@ -15,4 +15,5 @@ for i in range(n):
     for j in range(m,-1,-1):
         if j>=arr[i] and dp[j-arr[i]] != maxV:
             dp[j] = min(dp[j],dp[j-arr[i]] + 1)
-            print(i,j,dp[j])
+
+print(dp[m])
