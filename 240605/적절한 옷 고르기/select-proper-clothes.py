@@ -7,7 +7,7 @@ dresses = [
     for _ in range(n)
 ]
 
-minV = 0
+minV = -sys.maxsize
 
 # n개의 옷
 # m일 동안 옷을 적절하게 입기
@@ -23,16 +23,17 @@ dp = [
 def initialize():
 
     for i in range(n):
-        if dresses[i][1] <= (i+1) and  (i+1) <= dresses[i][2]:
-            dp[0][i] = dresses[i][2]
+        if dresses[i][0] == 1:
+            dp[0][i] = 0
 
 initialize()
 
 
-for i in range(m):      #일수 
+for i in range(1,m):      #일수 
     for j in range(n):  #전날 최대 값 
         for k in range(n): #당일 무슨옷 입을지
-            if dresses[k][0] <= (k+1) and  (k+1) <= dresses[k][1]:
-                dp[i][k] = max(dp[i][k],abs(dp[i-1][j] - dresses[k][2]))
+            if dresses[k][0] <= (i+1) and  (i+1) <= dresses[k][1] and dp[i-1][j] != minV:
+                at = abs(dresses[j][2] - dresses[k][2])
+                dp[i][k] = max(dp[i][k],at + dp[i-1][j])
 
 print(max(dp[m-1]))
