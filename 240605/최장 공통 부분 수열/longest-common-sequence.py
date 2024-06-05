@@ -31,7 +31,7 @@ for i in range(1, a_len):
     for j in range(1, b_len):
         if a[i] == b[j]:
             dp[i][j] = dp[i-1][j-1] +1
-        elif a[i-1] == b[j] or a[i] == b[j-1]:
+        else:
             dp[i][j] = max(dp[i-1][j],dp[i][j-1])
 
 print(dp[a_len-1][b_len-1])
