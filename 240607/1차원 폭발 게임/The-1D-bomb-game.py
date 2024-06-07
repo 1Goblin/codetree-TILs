@@ -6,42 +6,55 @@ arr = [
 ]
 
 sameN = []
-ans = []
-end =0
 
-def init():
-    for i in range(len(arr)):
-        if arr[i]==0:
-            continue
-        temp.append(arr[i])
+def pboom(i):
+    global end
+    for k in range(i-1,i-1-len(sameN),-1):
+        arr[k] = 0
+        end = False
 
-
-def boom(i):
-    for j in range(i-1,i-1-len(sameN), -1):
-        arr[j] = 0
-
-while(1):
-    for i in range(len(arr)):
-        if len(sameN)==0 or sameN[-1] == arr[i]:
+def boom():
+    global sameN
+    sameN = []
+    sameN.append(arr[0])
+    for i in range(1, len(arr)):
+        if sameN[-1] == arr[i]:
             sameN.append(arr[i])
         else:
             if len(sameN) >= m:
-                temp = []
-                boom(i)
-                init()
-                arr = temp
-                break
-            else:
-                sameN = []
-                sameN.append(arr[i])
-        if i==len(arr)-1:
-            end = 1
-    if end==1 or len(arr)==0:
+                pboom(i)
+            sameN = []
+            sameN.append(arr[i])
+
+        if len(arr)-1==i:
+            if len(sameN) >= m:
+                pboom(i+1)
+            sameN = []
+            sameN.append(arr[i])
+
+def init():
+    temp = []
+    global arr
+    for i in range(len(arr)):
+        if arr[i] == 0:
+            continue
+        temp.append(arr[i])
+    arr = temp
+
+
+while(1):
+    end = True
+    if len(arr) != 0:
+        boom()
+        init()
+
+    if end:
         break
 
 
 if len(arr) == 0:
     print(0)
 else:
+    print(len(arr))
     for i in arr:
         print(i)
