@@ -26,22 +26,22 @@ def swap(r1,c1,r2,c2):
     arr[r2][c2] = temp
     
 
+for _ in range(m):
+    for p in range(1,17):
 
-for p in range(1,17):
+        i, j = find_num(p)
 
-    i, j = find_num(p)
+        maxV = 0
+        maxP = (-1,-1)
 
-    maxV = 0
-    maxP = (-1,-1)
-
-    for dx, dy in zip(dxs,dys):
-        ndx, ndy = i+dx, j+dy
-        if in_range(ndx, ndy) and arr[ndx][ndy] > maxV:
-            maxV = arr[ndx][ndy]
-            maxP = (ndx,ndy)
-    
-    r,c = maxP
-    swap(i,j,r,c)
+        for dx, dy in zip(dxs,dys):
+            ndx, ndy = i+dx, j+dy
+            if in_range(ndx, ndy) and arr[ndx][ndy] > maxV:
+                maxV = arr[ndx][ndy]
+                maxP = (ndx,ndy)
+        
+        r,c = maxP
+        swap(i,j,r,c)
 
 
 for i in range(n):
