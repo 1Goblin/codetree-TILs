@@ -31,6 +31,9 @@ def boom():
                 pboom(i+1)
             sameN = []
             sameN.append(arr[i])
+    if len(arr) == 1 and m==1:
+        arr.pop()
+
 
 def init():
     temp = []
