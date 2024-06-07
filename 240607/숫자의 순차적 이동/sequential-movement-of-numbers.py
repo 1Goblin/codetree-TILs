@@ -27,10 +27,9 @@ def swap(r1,c1,r2,c2):
     
 
 for _ in range(m):
-    for p in range(1,17):
+    for p in range(1,n*n+1):
 
         i, j = find_num(p)
-
         maxV = 0
         maxP = (-1,-1)
 
