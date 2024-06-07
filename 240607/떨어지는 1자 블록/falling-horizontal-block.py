@@ -19,7 +19,7 @@ for j in range(k,k+m):
 
 for i in range(n):
     if cant_go(i):
-        continue
+        break
     for j in range(k,k+m):
         arr[i+1][j] = 1
         arr[i][j] = 0
