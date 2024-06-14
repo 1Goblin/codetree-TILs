@@ -56,7 +56,7 @@ arr = [
 ]
 
 seq = [
-    [-1 for _ in range(m)]
+    [0 for _ in range(m)]
     for _ in range(n)
 ]
 
@@ -90,4 +90,8 @@ visited[0][0] = 1
 
 bfs()
 
-print(seq[-1][-1])
+
+if seq[-1][-1] == 0:
+    print(-1)
+else:
+    print(seq[-1][-1])
