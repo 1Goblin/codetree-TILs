@@ -1,18 +1,18 @@
 n, m , k = tuple(map(int, input().split()))
 arr = list(map(int, input().split()))
 
+m = m-1
 ans = []
 answer = 0
 
 
 def fun(num):
     global answer
-    if num==4:
-
+    if num==n:
         an = 0
         for i in range(k):
             s = 0
-            for j in range(len(ans)):
+            for j in range(n):
                 if ans[j] == i:
                     s+=arr[j]
             if s>=m:
@@ -22,12 +22,12 @@ def fun(num):
 
     
     for i in range(k):
-        s = 0
-        for j in range(num):
-            if ans[j] == i:
-                s+=arr[j]
-        if s>=k:
-            continue
+        # s = 0
+        # for j in range(num):
+        #     if ans[j] == i:
+        #         s+=arr[j]
+        # if s>=k:
+        #     continue
         ans.append(i)
         fun(num+1)
         ans.pop()
