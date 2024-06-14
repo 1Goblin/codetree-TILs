@@ -68,7 +68,7 @@ visited = [
 dxs, dys = [1,-1,0,0], [0,0,1,-1]
 
 def can_go(x,y):
-    return x>=0 and y>=0 and x<n and y<m and arr[x][y] == 1 and visited[x][y] == 0
+    return x>=0 and y>=0 and x<n and y<m and  visited[x][y] == 0 and arr[x][y] == 1
 
 
 q = deque()
@@ -85,13 +85,12 @@ def bfs():
                 q.append((ndx,ndy))
 
 
+
+
 q.append((0,0))
 visited[0][0] = 1
 
 bfs()
 
 
-if seq[-1][-1] == 0:
-    print(-1)
-else:
-    print(seq[-1][-1])
+print(seq[-1][-1] if seq[-1][-1] != 0 else -1)
