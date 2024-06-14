@@ -25,7 +25,7 @@ dp[0] = 1
 
 for i in range(1,n):
     for j in range(i):
-        if i>j and arr[j]+j >= i and arr[j] < arr[i]:
+        if arr[j] < arr[i] and dp[j] != 0:
             dp[i] = max(dp[j] + 1, dp[i])
 
 print(max(dp))
