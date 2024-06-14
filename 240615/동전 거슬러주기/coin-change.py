@@ -20,6 +20,8 @@
 #     print(-1)
 # else:
 #     print(dp[m])
+
+
 import sys
 
 n, m = tuple(map(int, input().split()))
@@ -34,7 +36,11 @@ for i in arr:
 
 for i in range(1,m+1):
     for coin in arr:
-        if dp[i-coin] != maxV and i>coin:
+        if i>coin and dp[i-coin] != maxV:
             dp[i] = min(dp[i-coin] + 1, dp[i])
 
-print(dp[m])
+
+if dp[m] == maxV:
+    print(-1)
+else:
+    print(dp[m])
