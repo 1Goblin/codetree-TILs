@@ -43,6 +43,12 @@
 
 n, m = tuple(map(int, input().split()))
 
+
+visited =[
+    [0 for _ in range(m)]
+    for _ in range(n)
+]
+
 ans = 0
 
 arr = [
@@ -54,7 +60,7 @@ dxs, dys = [1,0], [0,1]
 
 
 def can_go(x,y):
-    return x>=0 and y>=0 and x<n and y<m and arr[x][y] != 0
+    return x>=0 and y>=0 and x<n and y<m and arr[x][y] != 0 and visited[x][y] == 0
 
 
 def dfs(x, y):
@@ -62,6 +68,7 @@ def dfs(x, y):
     for dx,dy in zip(dxs, dys):
         n_dx, n_dy = x+dx, y+dy
         if can_go(n_dx, n_dy):
+            visited[n_dx][n_dy] = 1
             dfs(n_dx, n_dy)
             if n_dx == n-1 and n_dy == m-1:
                 ans = 1
