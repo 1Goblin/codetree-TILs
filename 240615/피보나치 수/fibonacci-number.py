@@ -39,7 +39,9 @@ def fb(num):
     if num <=2:
         return 1
     
-    return fb(num-1) + fb(num-2)
+    mem[num] = fb(num-1) + fb(num-2)
+    
+    return mem[num]
 
 
 print(fb(n))
