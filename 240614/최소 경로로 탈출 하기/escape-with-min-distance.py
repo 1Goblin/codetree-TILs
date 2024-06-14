@@ -65,7 +65,7 @@ visited = [
     for _ in range(n)
 ]
 
-dxs, dys = [1,-1,0,0], [0,0,1,-1]
+
 
 def can_go(x,y):
     return x>=0 and y>=0 and x<n and y<m and  visited[x][y] == 0 and arr[x][y] == 1
@@ -75,6 +75,7 @@ q = deque()
 
 
 def bfs():
+    dxs, dys = [1,-1,0,0], [0,0,1,-1]
     while q:
         r, c = q.popleft()
         for dx, dy in zip(dxs, dys):
