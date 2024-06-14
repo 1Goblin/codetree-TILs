@@ -62,9 +62,9 @@ def dfs(x, y):
     for dx,dy in zip(dxs, dys):
         n_dx, n_dy = x+dx, y+dy
         if can_go(n_dx, n_dy):
+            dfs(n_dx, n_dy)
             if n_dx == n-1 and n_dy == m-1:
                 ans = 1
-            dfs(n_dx, n_dy)
 
 dfs(0,0)
 
