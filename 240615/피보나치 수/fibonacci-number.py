@@ -29,7 +29,12 @@
 
 n = int(input())
 
+mem = [-1] * (n+1)
+
 def fb(num):
+
+    if mem[num] != -1:
+        return mem[num]
 
     if num <=2:
         return 1
