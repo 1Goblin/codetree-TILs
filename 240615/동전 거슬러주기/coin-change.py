@@ -34,6 +34,8 @@ dp = [maxV] * (m+1)
 for i in arr:
     dp[i] = 1
 
+dp[0] = 0
+
 for i in range(1,m+1):
     for coin in arr:
         if i>coin and dp[i-coin] != maxV:
