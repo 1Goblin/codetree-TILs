@@ -64,7 +64,6 @@ def dfs(x, y):
         if can_go(n_dx, n_dy):
             if n_dx == n-1 and n_dy == m-1:
                 ans = 1
-            arr[n_dx][n_dy]= 8
             dfs(n_dx, n_dy)
 
 dfs(0,0)
