@@ -55,6 +55,10 @@ arr = [
     for _ in range(m)
 ]
 
+seq = [
+    [0 for _ in range(m)]
+    for _ in range(n)
+]
 
 visited = [
     [0 for _ in range(m)]
@@ -76,7 +80,8 @@ def bfs():
         for dx, dy in zip(dxs, dys):
             ndx, ndy = r+dx, c+dy
             if can_go(ndx, ndy):
-                visited[ndx][ndy] = visited[r][c] + 1
+                seq[ndx][ndy] = seq[r][c] + 1
+                visited[ndx][ndy] = 1
                 q.append((ndx,ndy))
 
 
@@ -85,5 +90,4 @@ visited[0][0] = 1
 
 bfs()
 
-
-print(visited[-1][-1]-1)
+print(seq[-1][-1])
