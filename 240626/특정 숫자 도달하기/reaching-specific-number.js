@@ -14,4 +14,4 @@ for(let i=0; i<10; i++){
     }
 }
 
-console.log(sum, m)
+console.log(sum, m.toFixed(1))
