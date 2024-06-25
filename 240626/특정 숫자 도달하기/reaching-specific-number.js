@@ -3,15 +3,16 @@ let input = fs.readFileSync(0).toString().trim().split(" ").map(Number)
 
 let sum = 0
 let m = 0
+let cnt = 0
 
-for(let i=0; i<10; i++){
-    if(input[i] >= 250){
-        for(let j=0; j<i; j++){
-            sum+=input[j]
-        }
-        m = sum/i
+for(let elem of input){
+    if(elem >= 250){
         break
     }
+    sum+=elem
+    cnt++
 }
 
-console.log(sum, m.toFixed(1))
+let avg = (sum/cnt).toFixed(1)
+
+console.log(sum, avg)
