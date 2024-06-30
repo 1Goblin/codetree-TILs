@@ -8,12 +8,20 @@ class Spy{
 const fs = require('fs')
 let input = fs.readFileSync(0).toString().trim().split('\n')
 
-let Spys = Array(5).fill(new Spy());
+spys = []
 
-for(let i=0; i<5; i++){
-
+for(let i = 0; i<5; i++){
     let [c,s] = input[i].split(' ')
-    Spys[i] = new Spy(c,s)
+    spys.push(new Spy(c,s))
 }
-Spys.sort()
-console.log(`${Spys[0].codeName} ${Spys[0].score}`)
+
+minS = 0
+
+for(let i =1; i<5; i++){
+    if(Number(spys[minS].score) > Number(spys[i].score)){
+
+        minS = i
+    }
+}
+
+console.log(spys[minS].codeName, spys[minS].score)
