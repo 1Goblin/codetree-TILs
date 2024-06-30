@@ -8,7 +8,7 @@ let n = Number(input[0])
 
 let segments = []
 
-for(let i=1; i<3; i++){
+for(let i=1; i<input.length; i++){
     segments.push(input[i].split(' '))
 }
 
