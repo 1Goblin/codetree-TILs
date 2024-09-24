@@ -9,7 +9,7 @@ dxs, dys = [0,1,0,-1], [1,0,-1,0]
 x,y=0,0
 
 def isRange(x,y):
-    return x>=0 and x<n and y>=0 and y<n
+    return x>=0 and x<n and y>=0 and y<m
 
 def isFill(dx,dy):
     return arr[dx][dy] != 0
