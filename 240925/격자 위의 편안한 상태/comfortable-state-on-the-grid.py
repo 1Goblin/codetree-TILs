@@ -17,9 +17,10 @@ for i in range(m):
     arr[r][c] = 1
 
     count = 0 
+
     for dx, dy in zip(ndx,ndy):
-        dxs =r + ndx[dx]
-        dys =c + ndy[dy]
+        dxs =r + dx
+        dys =c + dy
 
         if not isRange(dxs, dys):
             continue
