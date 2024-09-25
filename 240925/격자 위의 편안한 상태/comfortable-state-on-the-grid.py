@@ -21,15 +21,14 @@ for i in range(m):
         dxs =r + ndx[dx]
         dys =c + ndy[dy]
 
-
         if not isRange(dxs, dys):
             continue
-            
+
         if arr[dxs][dys] == 1:
             count+=1
-            
- 
-    if count >= 3:
+
+
+    if count == 3:
         print(1)
     else:
         print(0)
