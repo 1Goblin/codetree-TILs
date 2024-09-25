@@ -19,15 +19,17 @@ for i in range(m):
     count = 0 
     for dx, dy in zip(ndx,ndy):
         dxs =r + ndx[dx]
-        dys =c + ndy[dx]
+        dys =c + ndy[dy]
+
 
         if not isRange(dxs, dys):
             continue
             
         if arr[dxs][dys] == 1:
             count+=1
-    
-    if count>=3:
+            
+ 
+    if count >= 3:
         print(1)
     else:
         print(0)
