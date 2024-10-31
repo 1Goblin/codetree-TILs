@@ -15,7 +15,9 @@ public class Main {
         for(int i=1; i<10; i++){
             if(i%2==1){
                 sum+=arr[i];
-            }else if((i+1)%3==0){
+            }
+            
+            if((i+1)%3==0){
                 sum2+=arr[i];
                 cnt++;
             }
