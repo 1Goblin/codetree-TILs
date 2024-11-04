@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
 
     public static boolean isPrime(int n){
-        if(n <=2){
+        if(n <2){
             return false;
         }
         
