@@ -7,7 +7,7 @@ public class Main {
 
         while(true){
             
-            if((ans%10) %3 ==0){
+            if((ans%10) != 0 && (ans%10) %3 ==0){
                 return true;
             }
 
