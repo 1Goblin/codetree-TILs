@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static int test(String a, String b){
 
-        for(int i=0; i<a.length(); i++){
+        for(int i=0; i<=a.length()-b.length(); i++){
             for(int j=0; j<b.length(); j++){
                 if(a.charAt(i+j) != b.charAt(j)){
                     break;
