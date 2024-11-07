@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class a{
     String code;
     String point;
@@ -13,8 +15,13 @@ class a{
 
 public class Main {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-        a codetree = new a("codetree", "L", 13);
+        String code = sc.next();
+        String point = sc.next();
+        Integer time = sc.nextInt();
+
+        a codetree = new a(code, point, time);
         System.out.println("secret code : " + codetree.code);
         System.out.println("meeting point : " + codetree.point);
         System.out.println("time : " + codetree.time);
