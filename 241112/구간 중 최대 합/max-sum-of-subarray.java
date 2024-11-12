@@ -14,7 +14,7 @@ public class Main {
             arr[i] = sc.nextInt();
         }
         
-        for(int i=0; i<n-k; i++){
+        for(int i=0; i<=n-k; i++){
             int sum = 0;
             for(int j=i; j<i+k; j++){
                 sum+=arr[j];
