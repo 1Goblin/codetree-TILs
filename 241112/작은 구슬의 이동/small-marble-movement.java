@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Main {
     
-    public static int[] dx = new int[]{0,0,1,-1};
+    public static int[] dx = new int[]{0,0,-1,1};
     public static int[] dy = new int[]{1,-1,0,0};
     public static int n;
     public static int t;
@@ -53,10 +53,7 @@ public class Main {
             }
         }
 
-
         System.out.println((x) + " " + (y));
-
-
         // 여기에 코드를 작성해주세요.
     }
 }
