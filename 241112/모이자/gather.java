@@ -12,7 +12,7 @@ public class Main {
             arr[i] = sc.nextInt();
         }
 
-        int minAbs = 100000;
+        int minAbs = Integer.MAX_VALUE;
 
         for(int i=0; i<n; i++){
             int ans = 0;
